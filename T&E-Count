@@ -1,0 +1,37 @@
+import random
+n = 15
+Token = 0
+Exp = 0
+F = [10,11,12,12,13,13,14,14,15,15,16,16,17,17,19,19,20,20,21,22]
+L = ['E1','E2','E3','E4','F','D','L']
+while n > 0:
+    Step = input()
+    if  Step == L[0]: #一级敌刀
+        Exp = Exp+960
+        Token = Token+30
+    elif Step == L[1]: #二级敌刀
+        Exp = Exp+1200
+        Token = Token+33
+    elif Step == L[2]: #三级敌刀
+        Token = Token+36
+        Exp  = Exp+1440
+    elif Step ==L[3]: #四级敌刀
+        Token = Token+45
+        Exp = Exp+1780
+    elif Step ==L[4]: #随机花札并抽出
+        a = random.choice(F)
+        Token = Token+a
+        F.remove(a)
+    elif Step ==L[5]: #双倍花扎
+        def d(x):
+            return x*2    
+        DF = map(d,F)
+        F = list(DF)
+    elif Step ==L[6]: #陷阱掉花
+        b = random.randint(1,9)
+        Token = Token-b
+    print(Token,Exp)
+    n = n-1
+Token = Token+200
+Exp = Exp+2400
+print('Investigation Complete. You\'ve got',Token,'Token and',Exp,'Exp')
