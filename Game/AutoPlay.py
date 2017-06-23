@@ -30,7 +30,7 @@ while n > 0:
     elif S == I[0]: 
         a=a+1
         P.remove(S)    
-    elif S ==I[1]: 
+    elif S == I[1]: 
         b = random.randint(1,9)
         tok = tok-b
         P.remove(S)
