@@ -6,7 +6,7 @@
 from Scene import scenes
 import sys
 scene = scenes['Start']
-while 1 == 1:
+while True:
     next_step = None    
     description = scene['description']
     paths  = scene['paths']
