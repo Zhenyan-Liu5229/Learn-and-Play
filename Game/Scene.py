@@ -1,4 +1,34 @@
 scenes = {
+    'beginning':{
+    'description':'''You wake up. 
+    It’s ten to one in the afternoon, a plain and dull Friday afternoon. 
+    You are sitting in a computer lab, alone, with over thirty computers around you but no other fellow students. 
+    You are very anxious because you are supposed to have the last workshop for ENG342 here. 
+    No, there is no one. No Dave or David. 
+    The computer in front of you is working, requiring user name and password.''',
+    'paths':[
+    {'do':'enter','phrase':'type your username'}
+    ]
+},
+    'enter':{
+    'description':'''As soon as you finish typing, the password appears automatically on the screen, and the computer unlocks. 
+    Suddenly all the surroundings are gone.
+    One hand reaches from the computer screen and drags you into it.''',
+    'paths':[
+    {'do':'start','phrase':'look around'}
+    ]
+},
+    'start':{
+    'description':'''You are standing in the center of a mystic world.
+    Around you are various flying digital screens marked with numbers.
+    There are four screens you can choose to look at.''',
+    'paths':[
+    {'do':'No.7','phrase':'Look at No.7'},
+	{'do':'No.2','phrase':'Look at No.2'},
+	{'do':'No.3','phrase':'Look at No.3'},
+    {'do':'No.10','phrase':'Look at No.10'}
+    ]
+},
 	'No.7':{
 	'description':'''You are playing The Stanley Parable. 
 	Now your character, Stanley, is facing two open doors. 
@@ -107,16 +137,5 @@ scenes = {
     'Yes, it is.'
     You have to leave.''',
     'paths':[]
-},
-    'Start':{
-    'description':'''You are standing in the center of a mystic world.
-Around you are various flying digital screens marked with numbers.
-There are four screens you can choose to look at.''',
-    'paths':[
-    {'look_at':'No.7','phrase':'Look at No.7'},
-	{'look_at':'No.2','phrase':'Look at No.2'},
-	{'look_at':'No.3','phrase':'Look at No.3'},
-    {'look_at':'No.10','phrase':'Look at No.10'}
-    ]
 }
 }
