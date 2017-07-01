@@ -24,7 +24,7 @@ delay = input('>>> Press ENTER to start <<<')
 
 from Scene import scenes
 import sys
-scene = scenes['Start']
+scene = scenes['beginning']
 while True:
     next_step = None    
     description = scene['description']
