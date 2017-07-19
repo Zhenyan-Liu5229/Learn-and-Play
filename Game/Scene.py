@@ -54,7 +54,8 @@ scenes = {
     {'do':'No.2','phrase':'Look at No.2'}
     ]
 },
-    'disobey':'''You are a person of strong free will.
+    'disobey':{
+    'description':'''You are a person of strong free will.
     Obey a commanding stranger like him?
     Never!
     Stanley walks through the right door and never comes back.
