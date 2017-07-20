@@ -100,7 +100,7 @@ for word in words:
 
 #open file
 path='D:\\code\\PWL.txt'
-file = open(path)
+file = open(path,encoding='utf-8')
 words = []
 for line in file:
     line = line.strip()
