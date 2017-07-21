@@ -65,4 +65,4 @@ file.close()
 path = 'D:\\code\\class.txt'
 file = open(path, mode = 'a') #'w'mode will not save the file
 file.write('new line one')
-file.close
+file.close()
