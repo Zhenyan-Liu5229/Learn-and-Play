@@ -28,6 +28,7 @@ family = {}
 sound = {}
 for line in file:
     line = line.strip()
+    #some need line = line.strip('\ufeff')
     line = line.split(':')
     if line[0] == 'Language':
         language = line[1]
@@ -41,10 +42,10 @@ for line in file:
 
 for language in locations:
     if locations[language] in ['Canada','USA']:
-        print(language,'is native to NA')
+        print(language,'is native to NA.')
 for language in family:
     if family[language] == 'Indo-European':
-        print(language,'belongs to Indo-European')
+        print(language,'belongs to Indo-European.')
 for language in sound:
     if 's' in sound[language]:
-        print(language,'has the /s/ sound')
+        print(language,'has the /s/ sound.')
