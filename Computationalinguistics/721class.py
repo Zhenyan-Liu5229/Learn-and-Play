@@ -49,3 +49,14 @@ for language in family:
 for language in sound:
     if 's' in sound[language]:
         print(language,'has the /s/ sound.')
+
+#practice Cherokee
+file = open('D:\\code\\1.txt',encoding='utf-8')
+file.readline()
+for line in file:
+    line = line.strip()
+    line = line.split(',')
+    gloss = line[2].split(' ')
+    if 'tree' in gloss:
+        print(line[0],line[2])
+file.close()
