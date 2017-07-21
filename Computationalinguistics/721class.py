@@ -66,3 +66,19 @@ path = 'D:\\code\\class.txt'
 file = open(path, mode = 'a') #'w'mode will not save the file
 file.write('new line one')
 file.close()
+
+tables = {1:['Xue,Yuyan'],
+          2:[],
+          3:['Leon','Justin','Bowen','Cathy','Shamy','Victor'],
+          4:['James','Anita','Jeff']
+          }
+
+base = 'D:\\code\\'
+
+for number in range(1,5):
+    filename = 'table'+ str(number)+'.txt'
+    path = base+filename
+    file = open(path, mode = 'w', encoding = 'utf-8')
+    for person in tables[number]:
+        file.write(person+'\n')
+file.close()
