@@ -1,5 +1,5 @@
 #2017.7.20
-#dic
+#dict
 languages={'English':['Canada','USA','UK'],
             'French':['France','Canada','Senegal'],
             'Portugese':['Portugal','Brzail','Macau']}
