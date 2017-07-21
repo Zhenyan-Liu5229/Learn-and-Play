@@ -82,3 +82,19 @@ for number in range(1,5):
     for person in tables[number]:
         file.write(person+'\n')
 file.close()
+
+file = open('D:\\code\\1.txt')
+words = []
+for line in file:
+    line = line.strip()
+    line = line.split(',')
+    words.append(line[0])
+
+for word in words:
+    reduplication = word[0]+'a'+word
+    print(word,reduplication)
+#another
+reduplications = []
+    #reduplications.append(reduplication)
+#for n in range(len(words)):
+    #print(word[n],reduplication[n])
