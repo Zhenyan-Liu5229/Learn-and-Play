@@ -60,3 +60,9 @@ for line in file:
     if 'tree' in gloss:
         print(line[0],line[2])
 file.close()
+
+#file writing 
+path = 'D:\\code\\class.txt'
+file = open(path, mode = 'a') #'w'mode will not save the file
+file.write('new line one')
+file.close
