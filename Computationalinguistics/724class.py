@@ -21,3 +21,44 @@ for word in random_words:
     if word[0] in vowels: #try not in vowels (print 'pumpkin)
         print(word)
         break
+else:
+    print('Yeah')
+print('Aha')\
+
+#enumerate
+long_word = 'asdfertd'
+for index, letter in enumerate(long_word):
+    print(index,letter)
+
+#sorted
+for vowel in sorted(vowels):
+    print(vowel)
+vowels.sort()
+print(vowels)
+
+#practice Chaha
+labial = ['p','b','f','v','m']
+dorsal = ['k','g','x','q']
+words = []
+file = open('D:\\code\\1.txt')
+for line in file:
+    line = line.strip()
+    line = line.split(',')
+    line = line[0]
+    words.append(line)
+
+for word in words:
+    word = list(word)
+    word.reverse()
+    for i, letter in enumerate(word):
+        if letter in labial or letter in dorsal:
+            index = i
+            break
+    else:
+        index = 999
+
+    if index != 999:
+        word.insert(index,'w')
+    word.reverse()
+    word = ''.join(word) 
+    print(word)          
