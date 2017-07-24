@@ -116,3 +116,8 @@ def ca_reduplication():
         reduplicant = word[:3]+word+'an'
         reduplicants.append(reduplicant)
     return reduplicants
+
+#import
+import os
+import random
+print(os.getcwd())
