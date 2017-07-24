@@ -46,7 +46,8 @@ for line in file:
     line = line.split(',')
     line = line[0]
     words.append(line)
-
+file.close()
+    
 for word in words:
     word = list(word)
     word.reverse()
@@ -62,4 +63,22 @@ for word in words:
     word.reverse()
     word = ''.join(word) 
     print(word)          
+
+#practice on Saisiyat nouns
+file = open('D:\\code\\1.txt',)
+words = []
+for line in file:
+    line = line.strip()   
+    if not line:
+        continue
+    line = line.split(',')
+    words.append(line[0])
 file.close()
+
+reduplicants = []
+suffix = 'an'
+for word in words:
+    reduplicant = word[:3]+word+'an'
+    reduplicants.append(reduplicant)
+for n in range(len(words)):
+    print(words[n],reduplicants[n])
