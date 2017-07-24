@@ -82,3 +82,30 @@ for word in words:
     reduplicants.append(reduplicant)
 for n in range(len(words)):
     print(words[n],reduplicants[n])
+
+#function
+def print_word(word,make_upper):
+    if make_upper:
+        print(word.upper())
+    else:
+        print(word.lower())
+print_word('Apple',True)
+
+def double(n):
+    return n*2
+print(double(10))
+
+#use function to refactoring
+def open_file(path,separator):
+    file = open(path, encoding = 'utf-8')
+    words = []
+    for line in file:
+        line = line.strip()   
+        if not line:
+            continue
+        line = line.split(separator)
+        words.append(line[0])
+    file.close()
+    return words    
+
+words = open_file('D:\\code\\1.txt')
