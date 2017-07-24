@@ -62,3 +62,4 @@ for word in words:
     word.reverse()
     word = ''.join(word) 
     print(word)          
+file.close()
