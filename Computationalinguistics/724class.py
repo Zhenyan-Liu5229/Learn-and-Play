@@ -108,4 +108,11 @@ def open_file(path,separator):
     file.close()
     return words    
 
-words = open_file('D:\\code\\1.txt')
+words = open_file('D:\\code\\1.txt',',')
+
+def ca_reduplication():
+    reduplicants = []
+    for word in words:
+        reduplicant = word[:3]+word+'an'
+        reduplicants.append(reduplicant)
+    return reduplicants
