@@ -40,3 +40,30 @@ output = []
 for symbol in grammar['S']:
     generate(symbol,output)
 print(output)
+
+#English sentence generation
+import random
+
+def generate(sentence, symbol):
+    for next_symbol in grammar[symbol]:
+        if next_symbol.isupper():
+            generate(sentence,next_symbol)
+        else:
+            s = random.choice(grammar[symbol])
+            sentence.append(s)
+            return 
+
+grammar = {'S':['NP','VP'],
+           'NP':['D','ADJP','N'],
+           'D':['a','the'],
+           'ADJP':['A'],
+           'A':['big','tall','red','gree'],
+           'N':['cat','tree','parrot','viking'],
+           'VP':['V'],
+           'V':['jumps','eats','sings','throws']
+           }
+sentence = []
+
+generate(sentence,'S')
+sentence = '.'.join(sentence)
+print(sentence)
