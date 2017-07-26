@@ -12,18 +12,28 @@ for base_symbol in grammar['B']:
 sentence = ' '.join(sentence)
 print(sentence)
 
+#recursive grammar
+import random
 def generate(symbol, output):
+    if '*' in symbol:
+        rate = random.random()
+        if rate > 0.5:
+            symbol = symbol[0]
+        else:
+            symbol = ''
+
     if symbol.isupper():
         for s in grammar[symbol]:
             generate(s, output)
     else:
-        output.append(symbol)
+        if symbol:
+            output.append(symbol)
     return output
 
 grammar = {'S':['A','B'],
             'A':['C','a'],
             'B':['A','b'],
-            'C':['c']
+            'C':['A*','c']
             }
 
 output = []
