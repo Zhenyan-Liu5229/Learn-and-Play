@@ -46,17 +46,26 @@ import random
 
 def generate(sentence, symbol):
     for next_symbol in grammar[symbol]:
+        if '(' in next_symbol:
+            n = random.random()
+            if n >0.5:
+                next_symbol = next_symbol[1:-1]
+                next_symbol = ''.join(next_symbol)
+            else:
+                next_symbol = ''
+
         if next_symbol.isupper():
             generate(sentence,next_symbol)
         else:
             s = random.choice(grammar[symbol])
-            sentence.append(s)
+            if s.islower():
+                sentence.append(s)
             return 
 
 grammar = {'S':['NP','VP'],
            'NP':['D','ADJP','N'],
            'D':['a','the'],
-           'ADJP':['A'],
+           'ADJP':['A','(ADJP)'],
            'A':['big','tall','red','gree'],
            'N':['cat','tree','parrot','viking'],
            'VP':['V'],
