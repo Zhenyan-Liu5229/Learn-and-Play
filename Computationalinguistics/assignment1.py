@@ -1,17 +1,17 @@
-def file_open(path,n,l,separator):
-    file = open(path,encoding = 'utf-8')
+def file_open(path, name, list_needed, separator):
+    file = open(path, encoding = 'utf-8')
     for line in file:
         line = line.strip()
         line = line.split(separator)
-        if n in ['words','back_suffix']:
-            l.append(line[1])
-        elif n == 'vowels':
-            l.append(line[1:])
+        if name in ['words','back_suffix']:
+            list_needed.append(line[1])
+        elif name == 'vowels':
+            list_needed.append(line[1:])
         else:
-            l.append(line[2])
+            list_needed.append(line[2])
     file.close()
 
-def file_write(path,list_name):
+def file_write(path, list_name):
     file = open(path, mode = 'w', encoding = 'utf-8')
     for n in range(len(words)):
         line = words[n]+','+list_name[n]+'\n'
@@ -21,10 +21,10 @@ vowels = []
 back_suffix = []
 other_suffix = []
 
-file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\hungarian.txt','words',words,'\t')
-file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\vowels.txt','vowels',vowels,',')
-file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\suffixes.txt','back_suffix',back_suffix,',')
-file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\suffixes.txt','other_suffix',other_suffix,',')
+file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\hungarian.txt','words', words, '\t')
+file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\vowels.txt','vowels', vowels, ',')
+file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\suffixes.txt','back_suffix', back_suffix, ',')
+file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\suffixes.txt','other_suffix', other_suffix, ',')
 
 back_vowels = vowels[1]
 
