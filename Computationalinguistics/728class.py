@@ -17,3 +17,11 @@ text1.similar('monstrous')
 text2.similar('monstrous')
 text3.similar('monstrous')
 help(text1.similar)
+
+from nltk.corpus import sinica_treebank
+import random
+
+num = random.choice([n for n in range(len(indian.sent()))])
+print(indian.sents([num]))
+
+sinica_treebank.parsed_sents()[888].draw()
