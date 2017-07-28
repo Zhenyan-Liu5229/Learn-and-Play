@@ -24,11 +24,17 @@ def transition(letters, current_state):
                 current_state = transitions[current_state]
             else:
                 break   
-    if current_state == 'q1':
-        print('True')
+    if current_state == state[1]:
+        print('True\n')
     else:
-        print('False')        
+        print('False\n')        
 
-while True:   
+prompt = 'Please enter the combination of \'C\'s and \'V\'s. \n'   
+print(prompt)
+
+while True:
     letters = input()
-    transition(letters, 'q0')
+    if letters == 'exit':
+        break
+    else:
+        transition(letters, 'q0')
