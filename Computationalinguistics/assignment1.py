@@ -15,6 +15,8 @@ def file_write(path, list_name):
     file = open(path, mode = 'w', encoding = 'utf-8')
     for n in range(len(words)):
         line = words[n]+','+list_name[n]+'\n'
+        file.write(line)
+    file.clost()
 
 words = []
 vowels = []
