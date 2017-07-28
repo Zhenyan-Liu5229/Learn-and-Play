@@ -12,3 +12,8 @@ from nltk.book import *
 text1.concordance('god')
 text2.concordance('god')
 text3.concordance('god', lines = 10, width = 30)
+
+text1.similar('monstrous')
+text2.similar('monstrous')
+text3.similar('monstrous')
+help(text1.similar)
