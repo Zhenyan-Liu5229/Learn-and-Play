@@ -45,3 +45,34 @@ for fileid in G.fileids():
     num_sents = len(G.sents(fileid))
     num_vocab = len(set(w.lower() for w in G.words(fileid)))
     print(round(num_chars/num_words), round(num_words/num_sents), round(num_words/num_vocab), fileid)
+
+    #bigram
+text = 'a long time ago in a galaxy far far away'.split()
+bigrams = {}
+
+for index, word in enumerate(text):
+    try:
+        try:
+            bigrams[word].append(text[index+1])
+        except KeyError:
+            bigrams[word] = []
+            bigrams[word].append(text[index+1])
+    except IndexError:
+        pass
+print(bigrams)
+#or
+from collections import defaultdict
+text = 'a long time ago in a galaxy far far away'.split()
+bigrams = defaultdict(list)
+
+def make_grams(n):
+    grams = {}
+    for index, word in enumerate(text):
+        try:
+            n = n-1
+            grams[word].append(text[index+n])
+        except IndexError:
+           pass
+    return grams
+
+print(make_grams(2))
