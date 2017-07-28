@@ -7,3 +7,8 @@ doubles = [n*2 for n in range(10)]
 filtered_list = [word for word in word_list
                 if len(word) <5
                 and word[0].isupper()]
+#nltk
+from nltk.book import *
+text1.concordance('god')
+text2.concordance('god')
+text3.concordance('god', lines = 10, width = 30)
