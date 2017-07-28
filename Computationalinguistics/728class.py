@@ -25,3 +25,23 @@ num = random.choice([n for n in range(len(indian.sent()))])
 print(indian.sents([num]))
 
 sinica_treebank.parsed_sents()[888].draw()
+
+from nltk.corpus import gutenberg as G
+print(G.fileids())
+emma = G.words('austen-emma.txt')
+
+#number of words in one txt
+for fileid in G.fileids():
+    words = G.words(fileid)
+    print(fileid, len(words))
+
+#number of letters in one txt
+num_chars = len(G.raw('austen-emma.txt'))
+print(num_chars)
+
+for fileid in G.fileids():
+    num_chars = len(G.raw(fileid))
+    num_words = len(G.words(fileid))
+    num_sents = len(G.sents(fileid))
+    num_vocab = len(set(w.lower() for w in G.words(fileid)))
+    print(round(num_chars/num_words), round(num_words/num_sents), round(num_words/num_vocab), fileid)
