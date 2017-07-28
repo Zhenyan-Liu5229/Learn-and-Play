@@ -23,10 +23,10 @@ vowels = []
 back_suffix = []
 other_suffix = []
 
-file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\hungarian.txt','words', words, '\t')
-file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\vowels.txt','vowels', vowels, ',')
-file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\suffixes.txt','back_suffix', back_suffix, ',')
-file_open('C:\\Users\\Shirley Heather\\Desktop\\UBC\\suffixes.txt','other_suffix', other_suffix, ',')
+file_open('hungarian.txt','words', words, '\t')
+file_open('vowels.txt','vowels', vowels, ',')
+file_open('suffixes.txt','back_suffix', back_suffix, ',')
+file_open('suffixes.txt','other_suffix', other_suffix, ',')
 
 back_vowels = vowels[1]
 
@@ -46,5 +46,5 @@ for word in words:
         present_words.append(word+other_suffix[0])
         future_words.append(word+other_suffix[1])
 
-file_write('C:\\Users\\Shirley Heather\\Desktop\\UBC\\present.txt', present_words)
-file_write('C:\\Users\\Shirley Heather\\Desktop\\UBC\\future.txt', future_words)
+file_write('present.txt', present_words)
+file_write('future.txt', future_words)
