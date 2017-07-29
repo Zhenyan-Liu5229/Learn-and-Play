@@ -76,3 +76,19 @@ def make_grams(n):
     return grams
 
 print(make_grams(2))
+
+from nltk.corpus import gutenberg
+from collections import defaultdict
+words = gutenberg.words('shakespeare-hamlet.txt')
+
+def make_grams(n, text):
+    grams = defaultdict(list)
+    for index, word in enumerate(text):
+        try:
+            n = n-1
+            grams[word].append(text[index+1:index+n])
+        except IndexError:
+           pass
+    return grams
+
+print(make_grams(2, words))
