@@ -16,9 +16,11 @@ def print_header():
         ''')
 print_header()
 print('''
+
 Welcome to An Adventure into Digital Literature!
 You are one of students enrolled in ENG342 paper.
-Now, your adventure start...''')
+Now, your adventure start...
+''')
 
 delay = input('>>> Press ENTER to start <<<')
 
@@ -51,10 +53,11 @@ while True:
                 next_step = paths[index]
         except (IndexError,ValueError):
             print(Step,'is not a valid selection!',)
+
     if next_step == 'quit the game':
-        print('You decide to',next_step,'.','Good Bye!')
+        print('\nYou decide to',next_step,'.','Good Bye!')
         sys.exit()
     else:
         scene = scenes[next_step['do']]
         a = str.lower(next_step['phrase'])
-        print('You decide to',a,'.')
+        print('\nYou decide to',a,'.')
