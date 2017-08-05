@@ -1,0 +1,33 @@
+Explanation for Mongolian Neural Network
+
+Overview:
+Input nodes:5    Each represent one syllable in a word
+Output nodes:2   The first node represents the status of whether to stress the first syllable or not
+                 The second represents the status of whether to stress the right most long vowel.
+
+1. Inputs
+Use the list of 0.0, 1.0, and -1.0 to represent each syllable in a Mongolian word:
+- if the syllable contains only short vowels, then encode it as 0.0.
+- if the syllable contains long vowels, 1.0.
+
+  (To distinguish short vowels from long vowels,
+  I checked whether a letter appears a second time in one syllable.
+  That works for our training data, but if a Mongilian word is like 'ssan', there will cause some problems.)
+
+- if the word contains less than 5 (which is the longest in the traning data) syllables,
+  add -1.0 to the end to make len(input_node)==5 to achieve same input length.
+
+  (Up to now, this Neural Network only works for our training data.
+  If we want to test it with other Mongolian words,
+  need to equal the length of input nodes to the length of the word which has the most syllables.)
+
+
+2. Outputs
+Use the list of 0.0 and 1.0 to represent the stress pattern of a word:
+- if the first syllable is stressed, then encode this word as [1.0, 0.0],
+- if the rightmost long vowel is stressed, [0.0, 1.0]
+
+   (To achieve this, I went through the input nodes of each word.
+    if input node of a word does not contain 1.0,
+    then it only contains short vowels, and only need to stress the first syllable.
+    Otherwise, it contains long vowels, and need to stress the right most long vowel.)
