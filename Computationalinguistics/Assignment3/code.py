@@ -60,7 +60,7 @@ for index in range(len(inputs)):
     dataset.addSample(tuple(inputs[index]), tuple(outputs[index]))
 
 #Build a network that uses backpropogration
-network = buildNetwork(5, 5, 2)
+network = buildNetwork(5, 15, 2)
 trainer = BackpropTrainer(network, dataset)
 
 #Train the network with 100 examples of each training item
