@@ -29,5 +29,5 @@ Use the list of 0.0 and 1.0 to represent the stress pattern of a word:
 
    (To achieve this, I went through the input nodes of each word.
     if input node of a word does not contain 1.0,
-    then it only contains short vowels, and only need to stress the first syllable.
-    Otherwise, it contains long vowels, and need to stress the right most long vowel.)
+    then it only contains short vowels, and only needs to stress the first syllable.
+    Otherwise, it contains long vowels, and needs to stress the right most long vowel.)
