@@ -159,8 +159,10 @@ scenes = {
     Hey, isn't Interactive Fiction similar to RPGs?
     Can you solve the puzzle in Winchester's Nightmare?
     (Listen to the shell first!)
-    Oh god, you spoil my game!
-    ''',
+    Oh god, you spoil my game! You must pay for it!
+    Do what I tell you to do!
+    Now, press 1!
+    ''', #add stanley parable thing into it
     'paths':[
     {'do':'No.7','phrase':'Look at No.7'},
     {'do':'No.10','phrase':'Look at No.10'},
