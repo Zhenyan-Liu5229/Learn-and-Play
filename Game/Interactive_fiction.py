@@ -19,7 +19,7 @@ print('''
 
 Welcome to An Adventure into Digital Literature!
 You are one of students enrolled in ENG342 paper.
-Now, your adventure start...
+Now, your adventure starts...
 ''')
 
 delay = input('>>> Press ENTER to start <<<')
@@ -60,4 +60,5 @@ while True:
     else:
         scene = scenes[next_step['do']]
         a = str.lower(next_step['phrase'])
-        print('\nYou decide to',a,'.')
+        print('''*************************************
+You decide to''', a, '.')
