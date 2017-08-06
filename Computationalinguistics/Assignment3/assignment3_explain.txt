@@ -12,7 +12,7 @@ Use the list of 0.0, 1.0, and -1.0 to represent each syllable in a Mongolian wor
 
   (To distinguish short vowels from long vowels,
   I checked whether a letter appears a second time in one syllable.
-  That works for our training data, but if a Mongilian word is like 'ssan', there will cause some problems.)
+  That works for our training data, but if a Mongilian word is like 'ssan', it will cause some problems.)
 
 - if the word contains less than 5 (which is the longest in the traning data) syllables,
   add -1.0 to the end to make len(input_node)==5 to achieve same input length.
