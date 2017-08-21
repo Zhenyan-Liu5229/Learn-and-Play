@@ -3,6 +3,10 @@
 #I have wrote a paper draft of it as the final project of that course.
 #The code I put here are based on the toturial from https://randomgeekery.org/post/2007/01-handling-a-single-round/.
 
+from Scene import scenes
+import sys
+import random
+
 def print_header():
     print('''
     _            _      _             _                  _     _        
@@ -14,6 +18,11 @@ def print_header():
  |___/|_\__, |_|\__\__,_|_| |____|_|\__\___|_| \__,_|\__|\_,_|_| \___|  
         |___/    
         ''')
+
+read_status = []
+
+
+#start of the game    
 print_header()
 print('''
 
@@ -24,41 +33,56 @@ Now, your adventure starts...
 
 delay = input('>>> Press ENTER to start <<<')
 
-from Scene import scenes
-import sys
-scene = scenes['beginning']
+
+#the default beginning scene
+scene = scenes['beginning'] #notice: the scene is actually scenes[scene] instead of the name of that sence
 while True:
     next_step = None    
     description = scene['description']
     paths  = scene['paths']
     print(scene['description'])
 
+
 #Review the choices on board
     for i in range(0,len(paths)):
         path = paths[i]
         menu_item = i+1
         print(menu_item, path['phrase'])
-    print('(0, To quit the game)')
+    print('\n(r, To view what you have read)\n(0, To quit the game)')
+
 
 #User selection
-    prompt = 'Make a selection (0-%s):'%len(paths)
+    prompt = 'Make a selection (0-%s):' %len(paths)
     while next_step == None:
         try:
-            Step = input(prompt)
-            menu_selection = int(Step)
-            if menu_selection == 0:
-                next_step = 'quit the game'
-            else:
-                index = menu_selection-1
-                next_step = paths[index]
+            step = input(prompt)
+            if step == 'r': #allow player to see which one he/she has read
+                print('''*************************************
+--You have read %s''' %read_status)            
+            else: 
+                menu_selection = int(step)   
+                if menu_selection == 0:
+                    next_step = 'quit the game'
+                else:
+                    index = menu_selection-1
+                    next_step = paths[index]
         except (IndexError,ValueError):
-            print(Step,'is not a valid selection!',)
+            print(step,'is not a valid selection!',)
 
     if next_step == 'quit the game':
         print('\nYou decide to',next_step,'.','Good Bye!')
         sys.exit()
     else:
         scene = scenes[next_step['do']]
-        a = str.lower(next_step['phrase'])
+        next_phrase = str.lower(next_step['phrase'])
+        read_status.append(next_step['do'])
         print('''*************************************
-You decide to''', a, '.')
+You decide to''', next_phrase, '.')
+
+        #add random mode (2017.8.21)
+        if scene == {}:
+            numbers = [1,2,3,4,5,6,7,9,10]
+            screen_number = random.choice(numbers)
+            new_screen = 'No.'+ str(screen_number)
+            scene = scenes[new_screen]
+            read_status.append(new_screen) 
