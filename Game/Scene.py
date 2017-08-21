@@ -34,7 +34,7 @@ scenes = {
     {'do':'No.7', 'phrase':'Look at No.7'},
     {'do':'No.2', 'phrase':'Look at No.2'},
     {'do':'No.3', 'phrase':'Look at No.3'},
-    {'do':'No.10', 'phrase':'Look at No.10'}
+    {'do':'random', 'phrase':'Look at a random screen'}
     ]
 },
 
@@ -103,7 +103,7 @@ scenes = {
     {'do':'No.7', 'phrase':'Look at No.7'},
     {'do':'No.10', 'phrase':'Look at No.10'},
     {'do':'No.2', 'phrase':'Look at No.2'},
-    {'do':'No.6', 'phrase':'Look at No.6'}
+    {'do':'random', 'phrase':'Look at a random screen'}
     ]
 },
     
@@ -118,7 +118,7 @@ scenes = {
     {'do':'No.7','phrase':'Look at No.7'},
     {'do':'No.10','phrase':'Look at No.10'},
     {'do':'No.3','phrase':'Look at No.3'},
-    {'do':'No.5','phrase':'Look at No.5'}
+    {'do':'random', 'phrase':'Look at a random screen'}
     ]
 },
     
@@ -133,7 +133,7 @@ scenes = {
     'paths':[
     {'do':'No.7','phrase':'Look at No.7'},
     {'do':'No.10','phrase':'Look at No.10'},
-    {'do':'No.3','phrase':'Look at No.3'},
+    {'do':'random', 'phrase':'Look at a random screen'},
     ]
 },
     
@@ -149,7 +149,7 @@ scenes = {
     'paths':[
     {'do':'No.7','phrase':'Look at No.7'},
     {'do':'No.10','phrase':'Look at No.10'},
-    {'do':'No.9','phrase':'Look at No.9'},
+    {'do':'random', 'phrase':'Look at a random screen'},
     ]
 },
     
@@ -166,7 +166,7 @@ scenes = {
     'paths':[
     {'do':'No.7','phrase':'Look at No.7'},
     {'do':'No.10','phrase':'Look at No.10'},
-    {'do':'No.2','phrase':'Look at No.2'},
+    {'do':'random', 'phrase':'Look at a random screen'},
     ]
 },
     
@@ -183,7 +183,7 @@ scenes = {
     'paths':[
     {'do':'No.2','phrase':'Look at No.2'},
     {'do':'No.10','phrase':'Look at No.10'},
-    {'do':'No.3','phrase':'Look at No.3'},
+    {'do':'random', 'phrase':'Look at a random screen'},
     ]
 },
     
@@ -199,7 +199,7 @@ scenes = {
     {'do':'No.7','phrase':'Look at No.7'},
     {'do':'No.2','phrase':'Look at No.2'},
     {'do':'No.3','phrase':'Look at No.3'},
-    {'do':'No.1','phrase':'Look at No.1'}
+    {'do':'random', 'phrase':'Look at a random screen'}
     ]
 },
     
@@ -226,5 +226,7 @@ scenes = {
     You have to leave.
     ''',
     'paths':[]
-}
+},
+
+    'random':{}
 }
