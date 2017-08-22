@@ -31,9 +31,9 @@ scenes = {
     There are four screens you can choose to look at.
     ''',
     'paths':[
-    {'do':'No.7', 'phrase':'Look at No.7'},
     {'do':'No.2', 'phrase':'Look at No.2'},
     {'do':'No.3', 'phrase':'Look at No.3'},
+    {'do':'No.7', 'phrase':'Look at No.7'},
     {'do':'random', 'phrase':'Look at a random screen'}
     ]
 },
@@ -58,8 +58,9 @@ scenes = {
     ''',
     'paths':[
     {'do':'No.3', 'phrase':'Look at No.3'},
+    {'do':'No.5', 'phrase':'Look at No.5'},
     {'do':'No.10', 'phrase':'Look at No.10'},
-    {'do':'No.2', 'phrase':'Look at No.2'}
+    {'do':'random', 'phrase':'Look at a random screen'}
     ]
 },
     'disobey':{
@@ -100,9 +101,9 @@ scenes = {
     'description':'''You decide not to read this hypertext. You don't like to read and click.
     Instead, you turn around, and look at other screens.''',
     'paths':[
-    {'do':'No.7', 'phrase':'Look at No.7'},
-    {'do':'No.10', 'phrase':'Look at No.10'},
     {'do':'No.2', 'phrase':'Look at No.2'},
+    {'do':'No.4', 'phrase':'Look at No.4'},
+    {'do':'No.10', 'phrase':'Look at No.10'},
     {'do':'random', 'phrase':'Look at a random screen'}
     ]
 },
@@ -116,8 +117,8 @@ scenes = {
     ''',
     'paths':[
     {'do':'No.7','phrase':'Look at No.7'},
+    {'do':'No.9','phrase':'Look at No.9'},
     {'do':'No.10','phrase':'Look at No.10'},
-    {'do':'No.3','phrase':'Look at No.3'},
     {'do':'random', 'phrase':'Look at a random screen'}
     ]
 },
@@ -131,8 +132,8 @@ scenes = {
     You need to write a 2500-word essay about it.
     ''',
     'paths':[
-    {'do':'No.7','phrase':'Look at No.7'},
-    {'do':'No.10','phrase':'Look at No.10'},
+    {'do':'No.3','phrase':'Look at No.3'},
+    {'do':'No.6','phrase':'Look at No.6'},
     {'do':'random', 'phrase':'Look at a random screen'},
     ]
 },
@@ -147,8 +148,8 @@ scenes = {
     So how about playing with texts instead of games?
     ''',
     'paths':[
+    {'do':'No.1','phrase':'Look at No.1'},
     {'do':'No.7','phrase':'Look at No.7'},
-    {'do':'No.10','phrase':'Look at No.10'},
     {'do':'random', 'phrase':'Look at a random screen'},
     ]
 },
@@ -164,8 +165,8 @@ scenes = {
     Now, press 1!
     ''', #add stanley parable thing into it
     'paths':[
-    {'do':'No.7','phrase':'Look at No.7'},
-    {'do':'No.10','phrase':'Look at No.10'},
+    {'do':'No.4','phrase':'Look at No.4'},
+    {'do':'No.5','phrase':'Look at No.5'},
     {'do':'random', 'phrase':'Look at a random screen'},
     ]
 },
@@ -181,8 +182,9 @@ scenes = {
     Cannot understand them.
     ''',   
     'paths':[
+    {'do':'No.1','phrase':'Look at No.1'},
     {'do':'No.2','phrase':'Look at No.2'},
-    {'do':'No.10','phrase':'Look at No.10'},
+    {'do':'No.6','phrase':'Look at No.6'},
     {'do':'random', 'phrase':'Look at a random screen'},
     ]
 },
@@ -196,9 +198,9 @@ scenes = {
     And whoever pretending to be the god, I suppose you need a rest?
     ''',
     'paths':[
-    {'do':'No.7','phrase':'Look at No.7'},
-    {'do':'No.2','phrase':'Look at No.2'},
     {'do':'No.3','phrase':'Look at No.3'},
+    {'do':'No.4','phrase':'Look at No.4'},
+    {'do':'No.6','phrase':'Look at No.6'},
     {'do':'random', 'phrase':'Look at a random screen'}
     ]
 },
@@ -212,7 +214,8 @@ scenes = {
     Surprisingly, Dave remembers your name after this very first class!
     ''',
     'paths':[
-    {'do':'No.11','phrase':'Look at No.11'}
+    {'do':'No.11','phrase':'Look at No.11'},
+    {'do':'random', 'phrase':'Look at a random screen'}
     ]
 },
     
