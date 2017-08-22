@@ -19,8 +19,13 @@ def print_header():
         |___/    
         ''')
 
-read_status = []
+def readstatus(screens): #for users to check which contents they have read
+    if screens not in read_status:
+    	read_status.append(screens)
+    return(read_status)
 
+read_status = []
+numbers = [1,2,3,4,5,6,7,9,10] #The number of each screen
 
 #start of the game    
 print_header()
@@ -58,7 +63,7 @@ while True:
             step = input(prompt)
             if step == 'r': #allow player to see which one he/she has read
                 print('''*************************************
---You have read %s''' %read_status)            
+-- You have read %s''' %read_status)            
             else: 
                 menu_selection = int(step)   
                 if menu_selection == 0:
@@ -70,19 +75,22 @@ while True:
             print(step,'is not a valid selection!',)
 
     if next_step == 'quit the game':
-        print('\nYou decide to',next_step,'.','Good Bye!')
+        print('\nYou decide to %s. Good Bye!' %next_step)
         sys.exit()
     else:
         scene = scenes[next_step['do']]
         next_phrase = str.lower(next_step['phrase'])
-        read_status.append(next_step['do'])
+        readstatus(next_step['do'])
         print('''*************************************
 You decide to''', next_phrase, '.')
-
+        
         #add random mode (2017.8.21)
         if scene == {}:
-            numbers = [1,2,3,4,5,6,7,9,10]
             screen_number = random.choice(numbers)
+            numbers.remove(screen_number)
             new_screen = 'No.'+ str(screen_number)
             scene = scenes[new_screen]
-            read_status.append(new_screen) 
+            readstatus(new_screen)
+            if numbers == []:
+            	scene = scenes['No.11']
+            	readstatus('No.11')
