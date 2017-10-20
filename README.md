@@ -2,8 +2,6 @@
 
 Hello, eveyone!
 
-This is Pythia. I am an English major student and am interested in Computational Linguistics.
+This repository is about my study in computational linguistics or other programing courses.
 
-I am still a rookie in programming but I will try my best!
-
-All the code I put here are for Python only.
+Up to now I can only program with Python :)
